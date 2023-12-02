@@ -2,7 +2,9 @@ import React,{useEffect, useLayoutEffect} from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import {Button,Input,Image} from 'react-native-elements';
 import Icon from "react-native-vector-icons/FontAwesome5";
+//import SQLite from 'react-native-sqlite-storage';
 //import { openDatabase } from 'react-native-sqlite-storage';
+//var db = SQLite.openDatabase({ name: 'HatimKontrolOffline.db', createFromLocation: 1 });
 import * as SQLite from 'expo-sqlite';
 
 var db = SQLite.openDatabase('HatimKontrolOffline.db');

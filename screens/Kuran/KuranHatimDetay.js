@@ -3,6 +3,7 @@ import { StyleSheet, Text, View,ScrollView, Modal, TouchableOpacity } from 'reac
 import {Button,Input,Switch} from 'react-native-elements';
 import KuranHatimDetayItem from '../../components/KuranHatimDetayItem';
 import * as SQLite from 'expo-sqlite';
+//import SQLite from 'react-native-sqlite-storage';
 import Icon from "react-native-vector-icons/FontAwesome5";
 const okunduRenk = "#b2dfdb";
 const okunmadiRenk = "#f4f3f4";
@@ -35,6 +36,7 @@ const KuranHatimDetay = ({route, navigation}) => {
     const [cuzDegisim,setCuzDegisim]=useState(true);
     const [cuzListesi,setCuzListesi]=useState([]);
     var db = SQLite.openDatabase('HatimKontrolOffline.db');
+    //var db = SQLite.openDatabase({ name: 'HatimKontrolOffline.db', createFromLocation: 1 });
     useEffect(()=>{
         console.log("Cüz Listesi Getir");
         if(cuzDegisim){
